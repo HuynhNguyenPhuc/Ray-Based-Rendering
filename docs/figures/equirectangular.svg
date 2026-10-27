@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" width="760" height="340" font-family="Segoe UI, system-ui, -apple-system, sans-serif" role="img" aria-labelledby="equiTitle equiDesc">
+<title id="equiTitle">Equirectangular mapping</title>
+<desc id="equiDesc">A direction on the unit sphere with polar angle theta and azimuth phi maps to a position on a 2:1 rectangle; rows near the poles are stretched.</desc>
+<defs>
+<marker id="equiArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+<marker id="equiArrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker>
+</defs>
+<rect x="4" y="4" width="752" height="332" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="330" y1="24" x2="330" y2="316" stroke="#e2e8f0" stroke-width="1.5"/>
+
+<!-- sphere of directions -->
+<text x="24" y="34" font-size="16" font-weight="600" fill="#1e293b">Directions on the sphere</text>
+<circle cx="170" cy="190" r="100" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+<ellipse cx="170" cy="190" rx="100" ry="28" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<ellipse cx="170" cy="190" rx="40" ry="100" fill="none" stroke="#e2e8f0" stroke-width="1.2"/>
+<line x1="170" y1="70" x2="170" y2="300" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="178" y="64" font-size="14" fill="#475569">+y  (pole, θ = 0)</text>
+<circle cx="170" cy="190" r="4" fill="#1e293b"/>
+<!-- direction d -->
+<line x1="170" y1="190" x2="236" y2="130" stroke="#2563eb" stroke-width="3" marker-end="url(#equiArrowBlue)"/>
+<text x="242" y="128" font-size="15" fill="#1e3a8a">d</text>
+<path d="M170,160 A30,30 0 0 1 192,170" fill="none" stroke="#db2777" stroke-width="2"/>
+<text x="188" y="156" font-size="15" fill="#9d174d">θ</text>
+<path d="M200,198 A32,10 0 0 0 232,195" fill="none" stroke="#db2777" stroke-width="2"/>
+<text x="212" y="222" font-size="15" fill="#9d174d">φ</text>
+<text x="24" y="320" font-size="14" fill="#475569">d = (sin θ cos φ, cos θ, sin θ sin φ)</text>
+
+<!-- rectangle -->
+<text x="352" y="34" font-size="16" font-weight="600" fill="#1e293b">Film: (φ, θ) rectangle, W : H = 2 : 1</text>
+<rect x="380" y="100" width="340" height="170" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+<rect x="380" y="100" width="340" height="34" fill="#fce7f3" stroke="none"/>
+<rect x="380" y="236" width="340" height="34" fill="#fce7f3" stroke="none"/>
+<g stroke="#cbd5e1" stroke-width="1">
+<line x1="380" y1="134" x2="720" y2="134"/><line x1="380" y1="185" x2="720" y2="185"/><line x1="380" y1="236" x2="720" y2="236"/>
+<line x1="465" y1="100" x2="465" y2="270"/><line x1="550" y1="100" x2="550" y2="270"/><line x1="635" y1="100" x2="635" y2="270"/>
+</g>
+<line x1="380" y1="185" x2="720" y2="185" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="386" y="259" font-size="14" fill="#9d174d">pole rows: stretched, oversampled</text>
+<!-- equal pixels: equator vs near pole -->
+<rect x="540" y="168" width="20" height="20" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+<text x="566" y="203" font-size="14" fill="#1e3a8a">pixel at equator</text>
+<rect x="420" y="108" width="20" height="20" fill="#fbcfe8" stroke="#db2777" stroke-width="2"/>
+<text x="446" y="124" font-size="14" fill="#9d174d">same pixel size, far less solid angle</text>
+
+<!-- axes -->
+<line x1="380" y1="288" x2="560" y2="288" stroke="#475569" stroke-width="2" marker-end="url(#equiArrow)"/>
+<text x="570" y="293" font-size="14" fill="#475569">u:  φ = 2π u / W</text>
+<line x1="364" y1="100" x2="364" y2="210" stroke="#475569" stroke-width="2" marker-end="url(#equiArrow)"/>
+<text x="334" y="92" font-size="14" fill="#475569">v:  θ = π v / H</text>
+<text x="352" y="320" font-size="14" fill="#475569">solid angle of a pixel ≈ sin θ · Δθ · Δφ</text>
+</svg>

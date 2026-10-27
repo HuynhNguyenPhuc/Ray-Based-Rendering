@@ -1,0 +1,38 @@
+{
+    // Volume rendering configuration with fog/mist
+
+    "integrator": {
+        "type": "volume",
+        "maxDepth": 8,
+        "samplesPerPixel": 64,
+        "russianRoulette": true,
+        "nee": true
+    },
+
+    "volume": {
+        "steps": 128,
+        "scattering": true,
+        "multipleScattering": false
+    },
+
+    "camera": {
+        "type": "perspective",
+        "position": [0.0, 2.0, 8.0],
+        "lookAt": [0.0, 0.8, 0.0],
+        "up": [0.0, 1.0, 0.0],
+        "fov": 50.0
+    },
+
+    "image": {
+        "width": 800,
+        "height": 600,
+        "output": "results/volume.png",
+        "toneMapping": true,
+        "gamma": 2.2,
+        "exposure": 2.0
+    },
+
+    "background": [0.1, 0.12, 0.15],
+    "ambient": [0.02, 0.02, 0.03],
+    "showProgress": true
+}

@@ -1,0 +1,9 @@
+{
+    // Camera-model comparison on the Cornell box (see make_camera_models.py)
+    "integrator": {"type": "pathtracing", "maxDepth": 8, "samplesPerPixel": 64, "nee": true},
+    "camera": {"type": "environment", "position": [0.0, 1.0, 0.3]},
+    "image": {"width": 600, "height": 300, "output": "equirectangular.png", "toneMapping": true, "gamma": 2.2, "exposure": 1.5},
+    "background": [0.0, 0.0, 0.0],
+    "ambient": [0.0, 0.0, 0.0],
+    "showProgress": false
+}

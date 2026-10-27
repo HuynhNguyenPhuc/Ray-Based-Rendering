@@ -1,0 +1,45 @@
+{
+    // Example configuration for the Ray-Based Rendering Framework
+    // All settings have sensible defaults, only include what you need to change
+
+    "integrator": {
+        "type": "pathtracing",      // Options: simple, whitted, pathtracing, volume, volumepath, normal, depth, ao
+        "maxDepth": 10,
+        "samplesPerPixel": 128,
+        "russianRoulette": true,
+        "nee": true,                // Next Event Estimation
+        "mis": true                 // Multiple Importance Sampling
+    },
+
+    "camera": {
+        "type": "perspective",      // Options: perspective, orthographic, environment
+        "position": [0.0, 2.0, 8.0],
+        "lookAt": [0.0, 1.0, 0.0],
+        "up": [0.0, 1.0, 0.0],
+        "fov": 60.0,
+        "aperture": 0.0,            // Set > 0 for depth of field
+        "focusDistance": 5.0
+    },
+
+    "image": {
+        "width": 800,
+        "height": 600,
+        "output": "results/output.png",
+        "toneMapping": true,
+        "gamma": 2.2,
+        "exposure": 1.0
+    },
+
+    "volume": {
+        "steps": 64,
+        "scattering": true,
+        "multipleScattering": false
+    },
+
+    "scene": "",                    // Scene file path (optional, uses built-in scene if empty)
+    "background": [0.0, 0.0, 0.0],
+    "ambient": [0.1, 0.1, 0.1],
+
+    "verbose": false,
+    "showProgress": true
+}

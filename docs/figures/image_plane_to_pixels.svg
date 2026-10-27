@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" font-family="Segoe UI, system-ui, -apple-system, sans-serif" role="img" aria-labelledby="ip2pxTitle ip2pxDesc">
+<title id="ip2pxTitle">From the image plane to pixels</title>
+<desc id="ip2pxDesc">A point on the image plane, measured from the principal point with y up, becomes a pixel position by scaling with the focal lengths in pixels, adding the principal point and flipping y.</desc>
+<defs>
+<marker id="ip2pxArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+</defs>
+<rect x="4" y="4" width="752" height="322" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+<!-- image plane -->
+<text x="24" y="34" font-size="16" font-weight="600" fill="#1e293b">Image plane (camera units)</text>
+<rect x="40" y="70" width="280" height="190" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="180" y1="165" x2="300" y2="165" stroke="#475569" stroke-width="2" marker-end="url(#ip2pxArrow)"/>
+<text x="282" y="186" font-size="15" fill="#475569">x′</text>
+<line x1="180" y1="165" x2="180" y2="85" stroke="#475569" stroke-width="2" marker-end="url(#ip2pxArrow)"/>
+<text x="190" y="96" font-size="15" fill="#475569">y′</text>
+<circle cx="180" cy="165" r="5" fill="#1e293b"/>
+<text x="188" y="184" font-size="14" fill="#1e293b">principal point</text>
+<circle cx="260" cy="112" r="5" fill="#db2777"/>
+<text x="228" y="102" font-size="15" fill="#9d174d">(x′, y′)</text>
+<line x1="180" y1="112" x2="260" y2="112" stroke="#db2777" stroke-width="1.2" stroke-dasharray="3 4"/>
+<line x1="260" y1="112" x2="260" y2="165" stroke="#db2777" stroke-width="1.2" stroke-dasharray="3 4"/>
+<text x="24" y="292" font-size="14" fill="#475569">x′ = x / z,  y′ = y / z   (per unit focal length)</text>
+
+<!-- mapping -->
+<line x1="336" y1="165" x2="424" y2="165" stroke="#475569" stroke-width="2.5" marker-end="url(#ip2pxArrow)"/>
+<text x="340" y="146" font-size="14" fill="#475569">× (fx, fy)</text>
+<text x="338" y="192" font-size="14" fill="#475569">+ (cx, cy)</text>
+<text x="338" y="212" font-size="14" fill="#475569">flip y</text>
+
+<!-- film -->
+<text x="444" y="34" font-size="16" font-weight="600" fill="#1e293b">Film (pixels)</text>
+<rect x="460" y="70" width="280" height="190" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+<g stroke="#e2e8f0" stroke-width="1">
+<line x1="530" y1="70" x2="530" y2="260"/><line x1="600" y1="70" x2="600" y2="260"/><line x1="670" y1="70" x2="670" y2="260"/>
+<line x1="460" y1="117.5" x2="740" y2="117.5"/><line x1="460" y1="165" x2="740" y2="165"/><line x1="460" y1="212.5" x2="740" y2="212.5"/>
+</g>
+<line x1="460" y1="58" x2="600" y2="58" stroke="#475569" stroke-width="2" marker-end="url(#ip2pxArrow)"/>
+<text x="606" y="63" font-size="15" fill="#475569">u</text>
+<line x1="448" y1="70" x2="448" y2="150" stroke="#475569" stroke-width="2" marker-end="url(#ip2pxArrow)"/>
+<text x="436" y="168" font-size="15" fill="#475569">v</text>
+<circle cx="600" cy="165" r="5" fill="#1e293b"/>
+<text x="608" y="184" font-size="14" fill="#1e293b">(cx, cy)</text>
+<circle cx="680" cy="218" r="5" fill="#db2777"/>
+<text x="688" y="238" font-size="15" fill="#9d174d">(u, v)</text>
+<line x1="600" y1="218" x2="680" y2="218" stroke="#db2777" stroke-width="1.2" stroke-dasharray="3 4"/>
+<line x1="680" y1="165" x2="680" y2="218" stroke="#db2777" stroke-width="1.2" stroke-dasharray="3 4"/>
+<text x="466" y="86" font-size="14" fill="#475569">(0, 0)</text>
+<text x="690" y="254" font-size="14" fill="#475569">(W, H)</text>
+<text x="444" y="292" font-size="14" fill="#475569">u = fx · x′ + cx,   v = cy − fy · y′</text>
+</svg>

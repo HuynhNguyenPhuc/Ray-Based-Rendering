@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" width="680" height="320" font-family="Segoe UI, system-ui, -apple-system, sans-serif" role="img" aria-labelledby="lensTitle lensDesc">
+<title id="lensTitle">Thin-lens ray generation and depth of field</title>
+<desc id="lensDesc">Rays from one pixel leave different points of the lens and all pass through one point on the focal plane; at other depths they spread into a circle of confusion.</desc>
+<defs>
+<marker id="lensArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+</defs>
+<rect x="4" y="4" width="672" height="312" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+<!-- optical axis -->
+<line x1="30" y1="170" x2="650" y2="170" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+<!-- lens (aperture) -->
+<line x1="150" y1="100" x2="150" y2="240" stroke="#475569" stroke-width="4"/>
+<line x1="136" y1="100" x2="164" y2="100" stroke="#475569" stroke-width="2"/>
+<line x1="136" y1="240" x2="164" y2="240" stroke="#475569" stroke-width="2"/>
+<text x="60" y="76" font-size="14" fill="#475569">lens, radius ρ</text>
+<circle cx="150" cy="170" r="4" fill="#1e293b"/>
+
+<!-- focal plane -->
+<line x1="440" y1="50" x2="440" y2="290" stroke="#475569" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="330" y="36" font-size="14" fill="#475569">focal plane, distance d</text>
+
+<!-- rays through the lens meeting at F -->
+<line x1="150" y1="170" x2="440" y2="120" stroke="#2563eb" stroke-width="2.5"/>
+<line x1="150" y1="110" x2="440" y2="120" stroke="#2563eb" stroke-width="2"/>
+<line x1="150" y1="230" x2="440" y2="120" stroke="#2563eb" stroke-width="2"/>
+<circle cx="440" cy="120" r="6" fill="#2563eb"/>
+<text x="352" y="98" font-size="15" fill="#1e3a8a">F (in focus)</text>
+
+<!-- continuation of the rays behind the focal plane -->
+<line x1="440" y1="120" x2="590" y2="125" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<line x1="440" y1="120" x2="590" y2="94" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<line x1="440" y1="120" x2="590" y2="63" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+<!-- out-of-focus plane and circle of confusion -->
+<line x1="590" y1="50" x2="590" y2="290" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="590" y1="63" x2="590" y2="125" stroke="#db2777" stroke-width="6"/>
+<text x="470" y="262" font-size="14" fill="#9d174d">out of focus: rays spread</text>
+<text x="470" y="282" font-size="14" fill="#9d174d">over a circle of confusion</text>
+
+<line x1="150" y1="290" x2="440" y2="290" stroke="#475569" stroke-width="1.2" marker-end="url(#lensArrow)"/>
+<text x="290" y="308" font-size="15" fill="#475569">d</text>
+<text x="500" y="36" font-size="14" fill="#475569">plane at another depth</text>
+<!-- pixel -->
+<text x="40" y="206" font-size="14" fill="#1e293b">camera</text>
+<text x="40" y="224" font-size="14" fill="#1e293b">centre</text>
+</svg>

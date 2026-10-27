@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" font-family="Segoe UI, system-ui, -apple-system, sans-serif" role="img" aria-labelledby="pinholeTitle pinholeDesc">
+<title id="pinholeTitle">Pinhole projection by similar triangles</title>
+<desc id="pinholeDesc">Side view of a pinhole camera: the point (Y, Z) projects to y = f Y / Z on an image plane at distance f.</desc>
+<defs>
+<marker id="pinholeArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+</defs>
+<rect x="4" y="4" width="632" height="292" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+<!-- optical axis and image plane -->
+<line x1="40" y1="170" x2="600" y2="170" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="600" y1="170" x2="616" y2="170" stroke="#475569" stroke-width="1.5" marker-end="url(#pinholeArrow)"/>
+<text x="598" y="190" font-size="14" fill="#475569">z</text>
+<line x1="220" y1="60" x2="220" y2="270" stroke="#475569" stroke-width="3"/>
+<text x="228" y="82" font-size="14" fill="#475569">image plane (z = f)</text>
+
+<!-- pinhole -->
+<circle cx="80" cy="170" r="5" fill="#1e293b"/>
+<text x="50" y="196" font-size="14" fill="#1e293b">C (pinhole)</text>
+
+<!-- scene point and projecting ray -->
+<line x1="80" y1="170" x2="520" y2="90" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="520" cy="90" r="6" fill="#2563eb"/>
+<text x="470" y="72" font-size="15" fill="#1e3a8a">P = (X, Y, Z)</text>
+<circle cx="220" cy="144.5" r="5" fill="#db2777"/>
+<text x="60" y="124" font-size="15" fill="#9d174d">p = (fX/Z, fY/Z)</text>
+
+<!-- similar triangles -->
+<line x1="520" y1="90" x2="520" y2="170" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3 4"/>
+<text x="528" y="135" font-size="15" fill="#1e3a8a">Y</text>
+<line x1="220" y1="144.5" x2="220" y2="170" stroke="#db2777" stroke-width="1.5"/>
+
+<!-- distances -->
+<line x1="80" y1="232" x2="220" y2="232" stroke="#475569" stroke-width="1.2" marker-end="url(#pinholeArrow)"/>
+<text x="140" y="250" font-size="15" fill="#475569">f</text>
+<line x1="80" y1="268" x2="520" y2="268" stroke="#475569" stroke-width="1.2" marker-end="url(#pinholeArrow)"/>
+<text x="296" y="286" font-size="15" fill="#475569">Z</text>
+<line x1="80" y1="236" x2="80" y2="272" stroke="#cbd5e1" stroke-width="1"/>
+</svg>

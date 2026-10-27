@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" width="760" height="350" font-family="Segoe UI, system-ui, -apple-system, sans-serif" role="img" aria-labelledby="extrTitle extrDesc">
+<title id="extrTitle">Look-at construction of the camera extrinsics</title>
+<desc id="extrDesc">Side view: the forward axis points from the eye e to the target t, the right axis is the cross product of forward and the up hint, and the camera up axis completes the frame.</desc>
+<defs>
+<marker id="extrArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+<marker id="extrArrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker>
+<marker id="extrArrowPink" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#db2777"/></marker>
+</defs>
+<rect x="4" y="4" width="752" height="342" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+<!-- world frame -->
+<text x="24" y="34" font-size="16" font-weight="600" fill="#1e293b">Look-at construction (side view from +X, Y up)</text>
+<line x1="130" y1="235" x2="130" y2="150" stroke="#475569" stroke-width="2.5" marker-end="url(#extrArrow)"/>
+<text x="138" y="156" font-size="15" fill="#475569">Y</text>
+<line x1="130" y1="235" x2="50" y2="235" stroke="#475569" stroke-width="2.5" marker-end="url(#extrArrow)"/>
+<text x="38" y="226" font-size="15" fill="#475569">Z</text>
+<circle cx="130" cy="235" r="9" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+<circle cx="130" cy="235" r="3" fill="#475569"/>
+<text x="144" y="256" font-size="15" fill="#475569">X (towards viewer)</text>
+
+<!-- eye, target, forward -->
+<line x1="300" y1="235" x2="600" y2="120" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<circle cx="600" cy="120" r="6" fill="#1e293b"/>
+<text x="612" y="116" font-size="15" fill="#1e293b">target t</text>
+<line x1="300" y1="235" x2="412" y2="192" stroke="#db2777" stroke-width="3.5" marker-end="url(#extrArrowPink)"/>
+<text x="396" y="224" font-size="16" fill="#9d174d">f  (forward)</text>
+
+<!-- up hint and camera up -->
+<line x1="300" y1="235" x2="300" y2="125" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#extrArrow)"/>
+<text x="306" y="116" font-size="15" fill="#475569">up hint u₀</text>
+<line x1="300" y1="235" x2="257" y2="123" stroke="#2563eb" stroke-width="3.5" marker-end="url(#extrArrowBlue)"/>
+<text x="186" y="112" font-size="16" fill="#1e3a8a">u  (up)</text>
+
+<!-- right axis, out of the page -->
+<circle cx="300" cy="235" r="11" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+<circle cx="300" cy="235" r="4" fill="#2563eb"/>
+<text x="238" y="272" font-size="16" fill="#1e3a8a">r  (right, towards viewer)</text>
+<text x="256" y="298" font-size="15" fill="#1e293b">eye e</text>
+
+<!-- construction -->
+<text x="500" y="196" font-size="15" fill="#334155">f = (t − e) / ‖t − e‖</text>
+<text x="500" y="218" font-size="15" fill="#334155">r = (f × u₀) / ‖f × u₀‖</text>
+<text x="500" y="240" font-size="15" fill="#334155">u = r × f</text>
+<text x="500" y="278" font-size="15" fill="#334155">R = [ r  u  f ],   x<tspan baseline-shift="sub" font-size="11">w</tspan> = e + R x<tspan baseline-shift="sub" font-size="11">c</tspan></text>
+</svg>

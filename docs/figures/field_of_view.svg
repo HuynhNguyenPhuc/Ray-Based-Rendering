@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" width="760" height="340" font-family="Segoe UI, system-ui, -apple-system, sans-serif" role="img" aria-labelledby="fovTitle fovDesc">
+<title id="fovTitle">Field of view and focal length</title>
+<desc id="fovDesc">Side view of the viewing frustum: the vertical field of view is the angle at the camera centre subtended by the image height H at distance f.</desc>
+<defs>
+<marker id="fovArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+</defs>
+<rect x="4" y="4" width="752" height="332" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+<!-- visible region -->
+<polygon points="70,170 330,33 330,307" fill="#dbeafe" opacity="0.55"/>
+<line x1="70" y1="170" x2="330" y2="33" stroke="#2563eb" stroke-width="2"/>
+<line x1="70" y1="170" x2="330" y2="307" stroke="#2563eb" stroke-width="2"/>
+<line x1="40" y1="170" x2="350" y2="170" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="272" y="190" font-size="14" fill="#475569">optical axis</text>
+
+<!-- image plane of height H at distance f -->
+<line x1="260" y1="70" x2="260" y2="270" stroke="#475569" stroke-width="4"/>
+<text x="268" y="292" font-size="14" fill="#475569">image plane, height H</text>
+<line x1="276" y1="70" x2="276" y2="170" stroke="#db2777" stroke-width="2" marker-start="url(#fovArrow)" marker-end="url(#fovArrow)"/>
+<text x="284" y="124" font-size="15" fill="#9d174d">H / 2</text>
+
+<!-- camera centre and focal length -->
+<circle cx="70" cy="170" r="5" fill="#1e293b"/>
+<text x="46" y="196" font-size="14" fill="#1e293b">C</text>
+<line x1="70" y1="296" x2="260" y2="296" stroke="#475569" stroke-width="1.5" marker-end="url(#fovArrow)"/>
+<line x1="70" y1="288" x2="70" y2="304" stroke="#cbd5e1" stroke-width="1"/>
+<text x="156" y="318" font-size="15" fill="#475569">f</text>
+
+<!-- angle -->
+<path d="M119.5,144 A56,56 0 0 1 119.5,196" fill="none" stroke="#db2777" stroke-width="2.5"/>
+<text x="130" y="176" font-size="16" fill="#9d174d">θ<tspan dy="4" font-size="11">y</tspan></text>
+
+<!-- relations -->
+<text x="440" y="110" font-size="16" font-weight="600" fill="#1e293b">Vertical field of view θ<tspan dy="4" font-size="12">y</tspan></text>
+<text x="440" y="150" font-size="15" fill="#334155">tan(θy / 2) = (H / 2) / f</text>
+<text x="440" y="180" font-size="15" fill="#334155">fy = H / (2 tan(θy / 2))</text>
+<text x="440" y="222" font-size="15" fill="#334155">tan(θx / 2) = (W / H) · tan(θy / 2)</text>
+<text x="440" y="250" font-size="14" fill="#475569">longer f  →  smaller θ  →  narrower view</text>
+</svg>

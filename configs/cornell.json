@@ -1,0 +1,33 @@
+{
+    // High-quality Cornell Box render configuration
+
+    "integrator": {
+        "type": "pathtracing",
+        "maxDepth": 12,
+        "samplesPerPixel": 512,
+        "russianRoulette": true,
+        "nee": true,
+        "mis": true
+    },
+
+    "camera": {
+        "type": "perspective",
+        "position": [0.0, 1.0, 3.5],
+        "lookAt": [0.0, 1.0, 0.0],
+        "up": [0.0, 1.0, 0.0],
+        "fov": 40.0
+    },
+
+    "image": {
+        "width": 1024,
+        "height": 1024,
+        "output": "results/cornell_hq.png",
+        "toneMapping": true,
+        "gamma": 2.2,
+        "exposure": 1.5
+    },
+
+    "background": [0.0, 0.0, 0.0],
+    "ambient": [0.0, 0.0, 0.0],
+    "showProgress": true
+}
